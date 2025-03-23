@@ -33,7 +33,7 @@ export const navLinks = [
   
   export const aboutData = {
     description: "I'm a passionate web developer with expertise in creating responsive and interactive web applications. With a strong foundation in both frontend and backend technologies, I strive to build seamless user experiences that combine aesthetics with functionality. My goal is to create web solutions that not only meet but exceed client expectations.",
-    resumeLink: "./src/assets/Aniket Gupta Resume (2).pdf",
+    resumeLink: "Aniket Gupta Resume (2).pdf",
   };
   
   export const skillsData = [
