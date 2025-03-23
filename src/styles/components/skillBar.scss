@@ -1,0 +1,32 @@
+@import '../variable';
+
+.skill-bar {
+  margin-bottom: $spacing-md;
+  
+  .skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $spacing-xs;
+    
+    .skill-name {
+      font-weight: 500;
+    }
+    
+    .skill-percentage {
+      color: $primary-color;
+    }
+  }
+  
+  .skill-progress-bg {
+    height: 8px;
+    background-color: $bg-dark;
+    border-radius: $border-radius-full;
+    overflow: hidden;
+    
+    .skill-progress-fill {
+      height: 100%;
+      background-color: $primary-color;
+      border-radius: $border-radius-full;
+    }
+  }
+}

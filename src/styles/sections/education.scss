@@ -1,0 +1,208 @@
+@import '../variable';
+
+.education-section {
+  background-color: $bg-color;
+  padding: $spacing-xxxl 0;
+
+  @media (max-width: $breakpoint-sm) {
+    padding: $spacing-xl 0;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+
+    @media (max-width: $breakpoint-sm) {
+      margin-bottom: $spacing-lg;
+    }
+
+    h2 {
+      font-size: $font-size-xlarge;
+      font-weight: 700;
+      position: relative;
+
+      @media (max-width: $breakpoint-sm) {
+        font-size: $font-size-large;
+      }
+    }
+
+    .underline {
+      width: 70px;
+      height: 4px;
+      background-color: $primary-color;
+      margin: $spacing-sm auto 0;
+      border-radius: $border-radius-sm;
+
+      @media (max-width: $breakpoint-sm) {
+        width: 50px;
+        height: 3px;
+      }
+    }
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background-color: $border-color;
+      transform: translateX(-50%);
+
+      @media (max-width: $breakpoint-md) {
+        left: 25px;
+        transform: none;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        left: 15px;
+      }
+    }
+  }
+
+  .timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: $spacing-xxl;
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column !important;
+      align-items: flex-start;
+      margin-bottom: $spacing-xl;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      margin-bottom: $spacing-lg;
+    }
+
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .timeline-icon {
+    width: 50px;
+    height: 50px;
+    background-color: $primary-color;
+    color: white;
+    border-radius: $border-radius-full;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-large;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: $shadow-sm;
+    transition: all $transition-normal;
+
+    @media (max-width: $breakpoint-md) {
+      left: 25px;
+      transform: none;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      left: 15px;
+      width: 40px;
+      height: 40px;
+      font-size: $font-size-medium;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+      width: 30px;
+      height: 30px;
+      font-size: $font-size-small;
+    }
+  }
+
+  .timeline-content {
+    background-color: white;
+    padding: $spacing-lg;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-md;
+    width: 45%;
+    position: relative;
+    transition: all $transition-normal;
+
+    @media (max-width: $breakpoint-md) {
+      width: calc(100% - 50px);
+      margin-left: 50px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      padding: $spacing-md;
+      margin-left: 40px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+      margin-left: 30px;
+    }
+  }
+
+  .timeline-date {
+    font-weight: 600;
+    color: $text-light;
+    margin-bottom: $spacing-sm;
+  }
+
+  h3 {
+    font-size: $font-size-medium;
+    font-weight: 700;
+    color: $primary-color;
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: calc(#{$font-size-small} + 2px);
+    }
+  }
+
+  h4 {
+    font-size: $font-size-small;
+    font-weight: 600;
+    color: $text-color;
+    margin-bottom: $spacing-sm;
+  }
+
+  p {
+    font-size: $font-size-small;
+    color: $text-light;
+    line-height: 1.5;
+  }
+
+  .achievements {
+    margin-top: $spacing-md;
+    padding-left: $spacing-md;
+
+    @media (max-width: $breakpoint-sm) {
+      margin-top: $spacing-sm;
+      padding-left: $spacing-sm;
+    }
+
+    li {
+      font-size: $font-size-small;
+      color: $text-color;
+      list-style: disc;
+      margin-bottom: $spacing-xs;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

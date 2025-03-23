@@ -1,0 +1,126 @@
+@import '../variable';
+
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: $spacing-xxl 0 $spacing-xl;
+  
+  .footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $spacing-xl;
+    margin-bottom: $spacing-xxl;
+    
+    h4 {
+      font-size: $font-size-medium;
+      margin-bottom: $spacing-lg;
+      position: relative;
+      padding-bottom: $spacing-sm;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background-color: $primary-color;
+      }
+    }
+  }
+  
+  .footer-logo {
+    h3 {
+      font-size: $font-size-large;
+      margin-bottom: $spacing-sm;
+      color: $primary-color;
+    }
+    
+    p {
+      color: $text-light;
+    }
+  }
+  
+  .footer-links {
+    ul {
+      li {
+        margin-bottom: $spacing-sm;
+        
+        a {
+          color: $text-light;
+          transition: color $transition-normal;
+          
+          &:hover {
+            color: $primary-color;
+            padding-left: $spacing-sm;
+          }
+        }
+      }
+    }
+  }
+  
+  .footer-contact {
+    p {
+      margin-bottom: $spacing-sm;
+      color: $text-light;
+      
+      span {
+        color: white;
+        font-weight: 500;
+      }
+    }
+  }
+  
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: $spacing-xl;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    
+    .social-links-wrapper {
+      margin-bottom: $spacing-lg;
+      
+      .social-links {
+        a {
+          background-color: rgba(255, 255, 255, 0.1);
+          color: white;
+          
+          &:hover {
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+    
+    .copyright {
+      text-align: center;
+      color: $text-light;
+      font-size: $font-size-small;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .footer {
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      
+      .copyright {
+        margin-top: $spacing-lg;
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+@import '../variable';
+
+.about-section {
+  background-color: $bg-dark;
+  
+  .about-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xxl;
+    align-items: center;
+    
+    .about-image {
+      position: relative;
+      
+      img {
+        border-radius: $border-radius-md;
+        box-shadow: $shadow-md;
+      }
+      
+      &::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: 100%;
+        height: 100%;
+        border: 5px solid $primary-color;
+        border-radius: $border-radius-md;
+        z-index: -1;
+      }
+      
+      .experience-badge {
+        position: absolute;
+        bottom: -25px;
+        right: -25px;
+        width: 120px;
+        height: 120px;
+        background-color: $primary-color;
+        border-radius: $border-radius-full;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        
+        span:first-child {
+          font-size: $font-size-xlarge;
+          font-weight: 700;
+          line-height: 1;
+        }
+        
+        span:last-child {
+          font-size: $font-size-small;
+        }
+      }
+    }
+    
+    .about-text {
+      h3 {
+        font-size: $font-size-xlarge;
+        margin-bottom: $spacing-md;
+        font-weight: 700;
+      }
+      
+      p {
+        margin-bottom: $spacing-lg;
+        color: $text-light;
+      }
+      
+      .about-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $spacing-md;
+        margin-bottom: $spacing-xl;
+        
+        .info-item {
+          p {
+            margin-bottom: $spacing-xs;
+            
+            span {
+              font-weight: 600;
+              color: $text-color;
+            }
+          }
+        }
+      }
+      
+      .about-buttons {
+        display: flex;
+        gap: $spacing-md;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .about-section {
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: $spacing-xxl;
+      
+      .about-image {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      
+      .about-text {
+        h3 {
+          font-size: $font-size-large;
+        }
+        
+        .about-info {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}

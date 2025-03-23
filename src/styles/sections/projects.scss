@@ -1,0 +1,56 @@
+@import '../variable';
+
+.projects-section {
+    padding: 80px 0;
+    background-color: $bg-dark;
+  
+    .container {
+      text-align: center;
+    }
+  
+    .section-title {
+      font-size: $font-size-xlarge;
+      font-weight: 700;
+      margin-bottom: $spacing-xl;
+      position: relative;
+    }
+  
+    .underline {
+      width: 70px;
+      height: 4px;
+      background-color: $primary-color;
+      border-radius: $border-radius-sm;
+      margin: 0 auto;
+    }
+  
+    .section-description {
+      max-width: 700px;
+      margin: 0 auto $spacing-xxl;
+      color: $text-light;
+    }
+  
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: $spacing-xl;
+      margin-top: $spacing-lg;
+    }
+  
+    .more-projects {
+      margin-top: $spacing-xl;
+      
+      .btn {
+        padding: $spacing-md $spacing-xl;
+        font-size: $font-size-medium;
+      }
+    }
+  
+    @media (max-width: $breakpoint-sm) {
+      padding: 60px 0;
+  
+      .section-title {
+        font-size: $font-size-large;
+      }
+    }
+  }
+  

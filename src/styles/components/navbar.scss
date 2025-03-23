@@ -1,0 +1,119 @@
+@import '../variable';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: $spacing-md 0;
+  z-index: $z-index-navbar;
+  transition: all $transition-normal;
+  background-color: transparent;
+  
+  &.scrolled {
+    background-color: white;
+    box-shadow: $shadow-sm;
+    padding: $spacing-sm 0;
+  }
+  
+  .navbar-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    a {
+      font-size: $font-size-large;
+      font-weight: 700;
+      color: $primary-color;
+      letter-spacing: 1px;
+    }
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: $spacing-xl;
+    
+    li {
+      a {
+        color: $text-color;
+        font-weight: 500;
+        position: relative;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: $primary-color;
+          transition: width $transition-normal;
+        }
+        
+        &:hover::after,
+        &.active-link::after {
+          width: 100%;
+        }
+        
+        &.active-link {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  
+  .mobile-menu {
+    display: none;
+    
+    .mobile-menu-icon {
+      font-size: $font-size-large;
+      cursor: pointer;
+      color: $primary-color;
+    }
+    
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: white;
+      box-shadow: $shadow-lg;
+      padding: $spacing-xxl $spacing-xl;
+      transition: right $transition-normal;
+      
+      &.show-menu {
+        right: 0;
+      }
+      
+      .nav-links {
+        flex-direction: column;
+        gap: $spacing-lg;
+        
+        li {
+          a {
+            display: block;
+            padding: $spacing-sm 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .navbar {
+    .desktop-nav {
+      display: none;
+    }
+    
+    .mobile-menu {
+      display: block;
+    }
+  }
+}
