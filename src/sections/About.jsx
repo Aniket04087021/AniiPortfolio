@@ -28,7 +28,7 @@ const About = () => {
             viewport={{ once: true }}
           >
             <div className="image-container">
-              <img src="new_ani.jpg" alt="Aniket" />
+              <img src="ani.jpg" alt="Aniket" />
             </div>
           </motion.div>
 
