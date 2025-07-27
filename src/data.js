@@ -97,6 +97,15 @@ export const navLinks = [
       sourceCode: "https://github.com/Aniket04087021/Job-portal.git",
       liveDemo: "https://github.com/Aniket04087021/Job-portal.git",
     },
+    {
+  id: "project4",
+  title: "Task Manager App",
+  description: "A full-stack task management application built using the MERN stack. Users can sign up or log in using JWT-based authentication, and perform CRUD operations on tasks. Features include adding tasks, marking them as completed, editing task details, and deleting tasks. Designed with a clean and responsive UI for a smooth user experience.",
+  image: "Task Manager.png",
+  tags: ["React js", "Node js", "Express js", "MongoDB","SCSS", "CRUD"],
+  sourceCode: "https://github.com/Aniket04087021/Task-Manager.git",
+  liveDemo: "https://task-manager-mezo.vercel.app/"
+},
   ];
   
   export const experienceData = [
