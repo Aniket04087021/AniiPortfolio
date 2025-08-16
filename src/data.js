@@ -106,6 +106,16 @@ export const navLinks = [
   sourceCode: "https://github.com/Aniket04087021/Task-Manager.git",
   liveDemo: "https://task-manager-mezo.vercel.app/"
 },
+{
+  id: "project5",
+  title: "Ticket Pop",
+  description: "A full-stack movie booking application built using the MERN stack with authentication and user management powered by Clerk. Users can sign up, log in, and manage their profiles securely through Clerk’s authentication system, ensuring a smooth onboarding experience. The app enables users to browse movies, filter by genre or language, select show timings, and book seats with instant confirmation.",
+  image: "TicketPop.png",
+  tags: ["React js", "Node js", "Express js", "MongoDB","Tailwind CSS", "CRUD"],
+  sourceCode: "https://github.com/Aniket04087021/Ticket-Pop",
+  liveDemo: "https://ticket-pop-2h36.vercel.app/"
+},
+
   ];
   
   export const experienceData = [
