@@ -95,7 +95,7 @@ export const navLinks = [
       image: "Anii Naukri.png",
       tags: ["React js", "API Integration", "Node js", "MongoDB","JWT"],
       sourceCode: "https://github.com/Aniket04087021/Job-portal.git",
-      liveDemo: "https://github.com/Aniket04087021/Job-portal.git",
+      liveDemo: "https://job-portal-tlyh.vercel.app/",
     },
     {
   id: "project4",
