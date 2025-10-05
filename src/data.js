@@ -85,8 +85,8 @@ export const navLinks = [
       description: "ANII Hotel is a full-stack web application that simplifies the hotel booking process by allowing users to browse, select, and book hotel rooms effortlessly. It provides an intuitive interface for both customers and hotel administrators to manage bookings efficiently.",
       image: "anii hotel.png",
       tags: ["React js", "MongoDB", "Node js", "Express","Tailwind CSS"],
-      sourceCode: "https://github.com/Aniket04087021/ANII-Hotel.git",
-      liveDemo: "https://anii-hotel.netlify.app/",
+      sourceCode: "https://github.com/Aniket04087021/Hostel-Booking-app",
+      liveDemo: "https://hostel-booking-app-jdda.vercel.app/",
     },
     {
       id: "project3",
