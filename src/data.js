@@ -115,6 +115,17 @@ export const navLinks = [
   sourceCode: "https://github.com/Aniket04087021/Ticket-Pop",
   liveDemo: "https://ticket-pop-2h36.vercel.app/"
 },
+{
+  id: "project6",
+  title: "Weather Chatbot AI Agent",
+  description: "An AI-powered chatbot application that provides real-time weather updates and forecasts based on user queries. Built using the MERN stack, the app integrates an intelligent chat interface where users can interact naturally to get location-based weather insights. It leverages the Mastra Weather Agent streaming API for live weather data, offering a seamless conversational experience and responsive design across devices.",
+  image: "weather.png",
+  tags: ["React js", "Node js", "Express js", "MongoDB", "OpenAI API", "Tailwind CSS", "Mastra API"],
+  apiUsage: "POST https://millions-screeching-vultur.mastra.cloud/api/agents/weatherAgent/stream",
+  sourceCode: "https://github.com/Aniket04087021/Weather-chat",
+  liveDemo: "https://weather-chat-peach.vercel.app/"
+},
+
 
   ];
   
