@@ -2,6 +2,16 @@
 
 .skill-bar {
   margin-bottom: $spacing-md;
+  padding: $spacing-sm $spacing-md;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid $border-color;
+  border-radius: $border-radius-lg;
+  transition: transform $transition-fast, box-shadow $transition-fast;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
   
   .skill-info {
     display: flex;
@@ -18,15 +28,59 @@
   }
   
   .skill-progress-bg {
-    height: 8px;
+    height: 10px;
     background-color: $bg-dark;
     border-radius: $border-radius-full;
     overflow: hidden;
     
     .skill-progress-fill {
       height: 100%;
-      background-color: $primary-color;
+      background-image: linear-gradient(90deg, lighten($primary-color, 10%), $primary-color);
       border-radius: $border-radius-full;
+      position: relative;
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.15);
+
+      // animated shimmer
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -40%;
+        width: 40%;
+        background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.25), rgba(255,255,255,0));
+        animation: shimmer 2.2s infinite;
+      }
+
+      .progress-tip {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: $primary-color;
+        border: 2px solid lighten($primary-color, 20%);
+        box-shadow: 0 0 10px rgba($primary-color, 0.6);
+      }
     }
   }
+
+  // optional hue accent by levels
+  &.level-10 .skill-progress-fill { background-image: linear-gradient(90deg, #4ade80, #22c55e); }
+  &.level-9 .skill-progress-fill { background-image: linear-gradient(90deg, #86efac, #4ade80); }
+  &.level-8 .skill-progress-fill { background-image: linear-gradient(90deg, #a5b4fc, #6366f1); }
+  &.level-7 .skill-progress-fill { background-image: linear-gradient(90deg, #93c5fd, #3b82f6); }
+  &.level-6 .skill-progress-fill { background-image: linear-gradient(90deg, #60a5fa, #2563eb); }
+  &.level-5 .skill-progress-fill { background-image: linear-gradient(90deg, #fbbf24, #f59e0b); }
+  &.level-4 .skill-progress-fill { background-image: linear-gradient(90deg, #fca5a5, #ef4444); }
+  &.level-3 .skill-progress-fill { background-image: linear-gradient(90deg, #fda4af, #fb7185); }
+  &.level-2 .skill-progress-fill { background-image: linear-gradient(90deg, #fed7aa, #fb923c); }
+  &.level-1 .skill-progress-fill { background-image: linear-gradient(90deg, #e5e7eb, #9ca3af); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-120%); }
 }
