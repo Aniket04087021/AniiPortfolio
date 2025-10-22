@@ -29,6 +29,11 @@ export const navLinks = [
       url: "https://www.instagram.com/the_aniketgupta0408?igsh=OWZocjVuYmxxaHZz",
       icon: "FaInstagram",
     },
+      {
+      id: "behance",
+      url: "https://www.behance.net/aniketgupta77",
+      icon: "FaBehance",
+    },
   ];
   
   export const aboutData = {
