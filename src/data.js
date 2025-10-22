@@ -21,7 +21,7 @@ export const navLinks = [
     },
     {
       id: "twitter",
-      url: "https://twitter.com/aniket_dev",
+      url: "https://twitter.com/",
       icon: "FaTwitter",
     },
     {
