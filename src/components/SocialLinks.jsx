@@ -1,7 +1,7 @@
 import React from 'react';
 import { socialLinks } from '../data';
 import '../styles/components/socialLinks.scss';
-import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram, FaBehance } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const iconMap = {
@@ -9,6 +9,7 @@ const iconMap = {
   FaLinkedinIn: FaLinkedinIn,
   FaTwitter: FaTwitter,
   FaInstagram: FaInstagram,
+  FaBehance: FaBehance,
 };
 
 const SocialLinks = () => {

@@ -21,13 +21,18 @@ export const navLinks = [
     },
     {
       id: "twitter",
-      url: "https://twitter.com/aniket_dev",
+      url: "https://twitter.com/",
       icon: "FaTwitter",
     },
     {
       id: "instagram",
       url: "https://www.instagram.com/the_aniketgupta0408?igsh=OWZocjVuYmxxaHZz",
       icon: "FaInstagram",
+    },
+      {
+      id: "behance",
+      url: "https://www.behance.net/aniketgupta77",
+      icon: "FaBehance",
     },
   ];
   
