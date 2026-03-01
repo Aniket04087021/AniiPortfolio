@@ -10,6 +10,7 @@ import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import { motion as Motion } from 'framer-motion';
 import { socialLinks } from './data';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -124,6 +125,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
