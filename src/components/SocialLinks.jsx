@@ -23,6 +23,7 @@ const SocialLinks = () => {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`Aniket Gupta on ${link.id}`}
             whileHover={{ y: -5, scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0, y: 20 }}

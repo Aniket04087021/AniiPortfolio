@@ -25,7 +25,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Hi, I'm <span className="highlight gradient-text">Aniket</span>
+              Hi, I'm <span className="highlight gradient-text">Aniket Gupta</span>
             </motion.h1>
             
             <motion.div
@@ -105,7 +105,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <div className="image-container">
-              <img src="aniket.png" alt="Aniket" />
+              <img src="aniket.png" alt="Portrait of Aniket Gupta" />
               <div className="glow" />
             </div>
           </motion.div>

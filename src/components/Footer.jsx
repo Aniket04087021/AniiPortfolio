@@ -11,8 +11,8 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-logo">
-            <h3>Aniket</h3>
-            <p>Web Developer & Designer</p>
+            <h3>Aniket Gupta</h3>
+            <p>MERN Stack Web Developer</p>
           </div>
           
           <div className="footer-links">
@@ -45,7 +45,7 @@ const Footer = () => {
             <SocialLinks />
           </div>
           <p className="copyright">
-            &copy; {currentYear} Aniket - All Rights Reserved
+            &copy; {currentYear} Aniket Gupta - All Rights Reserved
           </p>
         </div>
       </div>

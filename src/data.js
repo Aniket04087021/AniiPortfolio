@@ -32,7 +32,7 @@ export const navLinks = [
   ];
   
   export const aboutData = {
-    description: "I'm a passionate web developer with expertise in creating responsive and interactive web applications. With a strong foundation in both frontend and backend technologies, I strive to build seamless user experiences that combine aesthetics with functionality. My goal is to create web solutions that not only meet but exceed client expectations.",
+    description: "I'm Aniket Gupta, a passionate MERN stack web developer with expertise in creating responsive and interactive web applications. With a strong foundation in both frontend and backend technologies, I strive to build seamless user experiences that combine aesthetics with functionality. My goal is to create web solutions that not only meet but exceed client expectations.",
     resumeLink: "Aniket Gupta Resume (2).pdf",
   };
   
@@ -109,7 +109,7 @@ export const navLinks = [
 {
   id: "project5",
   title: "Ticket Pop",
-  description: "A full-stack movie booking application built using the MERN stack with authentication and user management powered by Clerk. Users can sign up, log in, and manage their profiles securely through Clerk’s authentication system, ensuring a smooth onboarding experience. The app enables users to browse movies, filter by genre or language, select show timings, and book seats with instant confirmation.",
+  description: "A full-stack movie booking application built using the MERN stack with authentication and user management powered by Clerk. Users can sign up, log in, and manage their profiles securely through Clerk's authentication system, ensuring a smooth onboarding experience. The app enables users to browse movies, filter by genre or language, select show timings, and book seats with instant confirmation.",
   image: "TicketPop.png",
   tags: ["React js", "Node js", "Express js", "MongoDB","Tailwind CSS", "CRUD"],
   sourceCode: "https://github.com/Aniket04087021/Ticket-Pop",
@@ -193,5 +193,5 @@ export const navLinks = [
   export const contactInfo = {
     email: "gupta.aniket0408@gmail.com",
     phone: "+91 7021815645",
-    address: "Kalayan (w), Maharashtra",
+    address: "Kalyan (W), Maharashtra",
   };

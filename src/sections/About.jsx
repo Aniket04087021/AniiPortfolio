@@ -28,7 +28,7 @@ const About = () => {
             viewport={{ once: true }}
           >
             <div className="image-container">
-              <img src="ani.jpg" alt="Aniket" />
+              <img src="ani.jpg" alt="Aniket Gupta profile photo" />
             </div>
           </motion.div>
 
@@ -45,7 +45,7 @@ const About = () => {
             <div className="about-details">
               <div className="detail-item">
                 <h4>Name:</h4>
-                <p>Aniket</p>
+                <p>Aniket Gupta</p>
               </div>
               <div className="detail-item">
                 <h4>Email:</h4>
@@ -53,7 +53,7 @@ const About = () => {
               </div>
               <div className="detail-item">
                 <h4>Location:</h4>
-                <p>kalyan west, Maharashtra</p>
+                <p>Kalyan West, Maharashtra</p>
               </div>
               <div className="detail-item">
                 <h4>Freelance:</h4>

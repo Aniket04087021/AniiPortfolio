@@ -15,11 +15,21 @@ const ProjectCard = ({ project, index }) => {
       <div className="project-image">
         <img src={project.image} alt={project.title} />
         <div className="project-links">
-          <a href={project.sourceCode} target="_blank" rel="noopener noreferrer">
+          <a
+            href={project.sourceCode}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${project.title} source code on GitHub`}
+          >
             <FaGithub />
             <span>Code</span>
           </a>
-          <a href={project.liveDemo} target="_blank" rel="noopener noreferrer">
+          <a
+            href={project.liveDemo}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${project.title} live demo`}
+          >
             <FaExternalLinkAlt />
             <span>Demo</span>
           </a>

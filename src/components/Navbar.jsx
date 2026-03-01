@@ -44,7 +44,7 @@ const Navbar = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <a href="#home">Aniket</a>
+          <a href="#home" aria-label="Aniket Gupta portfolio home">Aniket</a>
         </motion.div>
 
         <ul className="nav-links desktop-nav">
