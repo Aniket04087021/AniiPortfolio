@@ -1,4 +1,4 @@
-@import '../variable';
+@use '../variable' as *;
 
 .contact-section {
   background-color: $bg-color;
@@ -67,7 +67,7 @@
   }
 
   .contact-info, .contact-form-wrapper {
-    width: calc(50% - #{$spacing-lg / 2});
+    width: calc(50% - #{$spacing-lg * 0.5});
     background-color: white;
     padding: $spacing-lg;
     border-radius: $border-radius-md;
@@ -75,7 +75,7 @@
     transition: all $transition-normal;
     
     @media (max-width: $breakpoint-md) {
-      width: calc(50% - #{$spacing-md / 2});
+      width: calc(50% - #{$spacing-md * 0.5});
       padding: $spacing-md;
     }
     

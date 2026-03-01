@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { aboutData } from '../data';
 import '../styles/sections/about.scss';
 import { FaDownload } from 'react-icons/fa';
@@ -8,7 +8,7 @@ const About = () => {
   return (
     <section id="about" className="about-section">
       <div className="container">
-        <motion.div
+        <Motion.div
           className="section-title"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,10 +17,10 @@ const About = () => {
         >
           <h2>About Me</h2>
           <div className="underline"></div>
-        </motion.div>
+        </Motion.div>
 
         <div className="about-content">
-          <motion.div
+          <Motion.div
             className="about-image"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -30,9 +30,9 @@ const About = () => {
             <div className="image-container">
               <img src="ani.jpg" alt="Aniket Gupta profile photo" />
             </div>
-          </motion.div>
+          </Motion.div>
 
-          <motion.div
+          <Motion.div
             className="about-text"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -61,7 +61,7 @@ const About = () => {
               </div>
             </div>
             
-            <motion.a
+            <Motion.a
               href={aboutData.resumeLink}
               className="btn primary-btn"
               download
@@ -69,8 +69,8 @@ const About = () => {
               whileTap={{ scale: 0.95 }}
             >
               <FaDownload className="icon" /> Download CV
-            </motion.a>
-          </motion.div>
+            </Motion.a>
+          </Motion.div>
         </div>
       </div>
     </section>
@@ -78,3 +78,4 @@ const About = () => {
 };
 
 export default About;
+

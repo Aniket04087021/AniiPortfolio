@@ -1,4 +1,4 @@
-@import '../variable';
+@use '../variable' as *;
 
 .experience-section {
   padding: $spacing-xxxl 0;

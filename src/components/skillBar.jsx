@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/components/skillBar.scss';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
 const SkillBar = ({ skill, index }) => {
   const levelClass = `level-${Math.min(10, Math.max(1, Math.round(skill.proficiency / 10)))}`;
@@ -12,7 +12,7 @@ const SkillBar = ({ skill, index }) => {
       </div>
       
       <div className="skill-progress-bg">
-        <motion.div
+        <Motion.div
           className="skill-progress-fill"
           initial={{ width: 0 }}
           whileInView={{ width: `${skill.proficiency}%` }}
@@ -20,7 +20,7 @@ const SkillBar = ({ skill, index }) => {
           viewport={{ once: true }}
         >
           <span className="progress-tip" />
-        </motion.div>
+        </Motion.div>
       </div>
     </div>
   );

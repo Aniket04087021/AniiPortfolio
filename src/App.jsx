@@ -8,7 +8,7 @@ import Education from './sections/Education';
 import Experience from './sections/Experience';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { socialLinks } from './data';
 
 function App() {
@@ -88,7 +88,7 @@ function App() {
   if (isLoading) {
     return (
       <div className="loading-screen">
-        <motion.div
+        <Motion.div
           className="loader"
           animate={{
             scale: [1, 1.2, 1],
@@ -100,13 +100,13 @@ function App() {
             ease: "easeInOut"
           }}
         />
-        <motion.h2
+        <Motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
           Loading...
-        </motion.h2>
+        </Motion.h2>
       </div>
     );
   }
@@ -129,3 +129,4 @@ function App() {
 }
 
 export default App;
+

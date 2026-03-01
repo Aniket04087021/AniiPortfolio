@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { skillsData } from '../data';
 import SkillBar from '../components/skillBar';
 import '../styles/sections/skills.scss';
@@ -20,7 +20,7 @@ const Skills = () => {
   return (
     <section id="skills" className="skills-section">
       <div className="container">
-        <motion.div
+        <Motion.div
           className="section-title"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -29,7 +29,7 @@ const Skills = () => {
         >
           <h2>My Skills</h2>
           <div className="underline"></div>
-        </motion.div>
+        </Motion.div>
 
         <div className="skills-content">
           <div className="skills-controls">
@@ -77,7 +77,7 @@ const Skills = () => {
           <div className="skills-list">
             {skillsData.map((category, categoryIndex) => (
               activeTab === categoryIndex && (
-                <motion.div
+                <Motion.div
                   key={category.category}
                   className="skills-category"
                   initial={{ opacity: 0, y: 20 }}
@@ -101,7 +101,7 @@ const Skills = () => {
                   ) : (
                     <div className="badges-grid">
                       {filteredSkills.map((skill, skillIndex) => (
-                        <motion.div
+                        <Motion.div
                           key={`${category.category}-${skill.name}`}
                           className={`skill-badge level-${Math.round(skill.proficiency / 10)}`}
                           initial={{ opacity: 0, scale: 0.9 }}
@@ -118,7 +118,7 @@ const Skills = () => {
                                   a 15.9155 15.9155 0 0 1 0 31.831
                                   a 15.9155 15.9155 0 0 1 0 -31.831"
                               />
-                              <motion.path
+                              <Motion.path
                                 className="circle"
                                 initial={{ strokeDasharray: '0, 100' }}
                                 whileInView={{ strokeDasharray: `${skill.proficiency}, 100` }}
@@ -132,14 +132,14 @@ const Skills = () => {
                             <span className="percent">{skill.proficiency}%</span>
                           </div>
                           <span className="name">{skill.name}</span>
-                        </motion.div>
+                        </Motion.div>
                       ))}
                       {filteredSkills.length === 0 && (
                         <div className="empty-state">No skills match your search.</div>
                       )}
                     </div>
                   )}
-                </motion.div>
+                </Motion.div>
               )
             ))}
           </div>

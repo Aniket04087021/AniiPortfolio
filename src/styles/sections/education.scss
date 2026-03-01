@@ -1,4 +1,4 @@
-@import '../variable';
+@use '../variable' as *;
 
 .education-section {
   background-color: $bg-color;

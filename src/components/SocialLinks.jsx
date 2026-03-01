@@ -2,7 +2,7 @@ import React from 'react';
 import { socialLinks } from '../data';
 import '../styles/components/socialLinks.scss';
 import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram, FaBehance } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
 const iconMap = {
   FaGithub: FaGithub,
@@ -19,7 +19,7 @@ const SocialLinks = () => {
         const Icon = iconMap[link.icon];
         
         return (
-          <motion.a
+          <Motion.a
             key={link.id}
             href={link.url}
             target="_blank"
@@ -32,7 +32,7 @@ const SocialLinks = () => {
             transition={{ duration: 0.3, delay: index * 0.1 }}
           >
             <Icon />
-          </motion.a>
+          </Motion.a>
         );
       })}
     </div>
@@ -40,3 +40,4 @@ const SocialLinks = () => {
 };
 
 export default SocialLinks;
+

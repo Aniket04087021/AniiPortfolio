@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { navLinks } from '../data';
 import '../styles/components/navbar.scss';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -38,18 +38,18 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <motion.div 
+        <Motion.div 
           className="logo"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <a href="#home" aria-label="Aniket Gupta portfolio home">Aniket</a>
-        </motion.div>
+          <a href="#home" aria-label="Aniket Gupta portfolio home"></a>
+        </Motion.div>
 
         <ul className="nav-links desktop-nav">
           {navLinks.map((link) => (
-            <motion.li
+            <Motion.li
               key={link.id}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ const Navbar = () => {
               >
                 {link.title}
               </a>
-            </motion.li>
+            </Motion.li>
           ))}
         </ul>
 
@@ -71,7 +71,7 @@ const Navbar = () => {
             {toggle ? <FaTimes /> : <FaBars />}
           </div>
 
-          <motion.div 
+          <Motion.div 
             className={`mobile-nav ${toggle ? 'show-menu' : ''}`}
             initial={{ opacity: 0, x: 50 }}
             animate={{ 
@@ -96,7 +96,7 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </Motion.div>
         </div>
       </div>
     </nav>
@@ -104,3 +104,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

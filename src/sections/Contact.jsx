@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import ContactForm from '../components/ContactForm';
 import { contactInfo } from '../data';
 import '../styles/sections/contact.scss';
@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <section id="contact" className="contact-section">
       <div className="container">
-        <motion.div
+        <Motion.div
           className="section-title"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -18,10 +18,10 @@ const Contact = () => {
         >
           <h2>Get In Touch</h2>
           <div className="underline"></div>
-        </motion.div>
+        </Motion.div>
 
         <div className="contact-container">
-          <motion.div
+          <Motion.div
             className="contact-info"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -62,9 +62,9 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </Motion.div>
           
-          <motion.div
+          <Motion.div
             className="contact-form-wrapper"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -73,7 +73,7 @@ const Contact = () => {
           >
             <h3>Send A Message</h3>
             <ContactForm />
-          </motion.div>
+          </Motion.div>
         </div>
       </div>
     </section>

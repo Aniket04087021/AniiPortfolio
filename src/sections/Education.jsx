@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { educationData } from '../data';
 import '../styles/sections/education.scss';
 import { FaGraduationCap } from 'react-icons/fa';
@@ -8,7 +8,7 @@ const Education = () => {
   return (
     <section id="education" className="education-section">
       <div className="container">
-        <motion.div
+        <Motion.div
           className="section-title"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,11 +17,11 @@ const Education = () => {
         >
           <h2>Education</h2>
           <div className="underline"></div>
-        </motion.div>
+        </Motion.div>
 
         <div className="timeline">
           {educationData.map((item, index) => (
-            <motion.div
+            <Motion.div
               key={index}
               className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -43,7 +43,7 @@ const Education = () => {
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>

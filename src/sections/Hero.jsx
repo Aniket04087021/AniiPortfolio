@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import SocialLinks from '../components/SocialLinks';
 import '../styles/sections/hero.scss';
 
@@ -9,26 +9,44 @@ const Hero = () => {
     'MERN Stack Developer',
     'UI/UX Enthusiast',
   ], []);
+  const highlightChips = useMemo(
+    () => ['React', 'Node.js', 'MongoDB', 'Express', 'API Integration'],
+    []
+  );
+  const quickStats = useMemo(
+    () => [
+      { label: 'Projects Built', value: '12+' },
+      { label: 'Tech Stack', value: 'MERN' },
+      { label: 'Experience', value: '2+ Years' },
+    ],
+    []
+  );
+  const floatingTags = useMemo(
+    () => ['React', 'Node.js', 'MongoDB', 'OpenAI API'],
+    []
+  );
 
   return (
     <section id="home" className="hero-section">
+      <div className="hero-bg-grid" aria-hidden="true" />
       <div className="hero-container">
         <div className="hero-content">
-          <motion.div
+          <Motion.div
             className="hero-text"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <motion.h1
+            <Motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Hi, I'm <span className="highlight gradient-text">Aniket Gupta</span>
-            </motion.h1>
+              <span className="eyebrow">Portfolio of</span>
+              <span className="name gradient-text">Aniket Gupta</span>
+            </Motion.h1>
             
-            <motion.div
+            <Motion.div
               className="typewriter"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -44,61 +62,87 @@ const Hero = () => {
                   </span>
                 </span>
               </h2>
-            </motion.div>
+            </Motion.div>
             
-            <motion.p
+            <Motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              Crafting responsive websites and web applications with modern technologies.
-            </motion.p>
+              I build fast, responsive, and scalable web applications with clean UI,
+              production-ready architecture, and strong problem-solving.
+            </Motion.p>
 
-            <motion.div
+            <Motion.div
               className="availability"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.9 }}
             >
               <span className="dot" /> Available for freelance & full-time roles
-            </motion.div>
+            </Motion.div>
+
+            <Motion.div
+              className="hero-chips"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.95 }}
+            >
+              {highlightChips.map((chip) => (
+                <span key={chip} className="chip">{chip}</span>
+              ))}
+            </Motion.div>
             
-            <motion.div
+            <Motion.div
               className="hero-buttons"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
             >
-              <motion.a
+              <Motion.a
                 href="#contact"
                 className="btn primary-btn"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Get In Touch
-              </motion.a>
+              </Motion.a>
               
-              <motion.a
+              <Motion.a
                 href="#projects"
                 className="btn secondary-btn"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 View Projects
-              </motion.a>
-            </motion.div>
+              </Motion.a>
+            </Motion.div>
+
+            <Motion.div
+              className="hero-stats"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.1 }}
+            >
+              {quickStats.map((stat) => (
+                <div className="stat" key={stat.label}>
+                  <strong>{stat.value}</strong>
+                  <span>{stat.label}</span>
+                </div>
+              ))}
+            </Motion.div>
             
-            <motion.div
+            <Motion.div
               className="hero-social"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.2 }}
+              transition={{ duration: 0.5, delay: 1.25 }}
             >
               <SocialLinks />
-            </motion.div>
-          </motion.div>
+            </Motion.div>
+          </Motion.div>
           
-          <motion.div
+          <Motion.div
             className="hero-image"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -106,9 +150,16 @@ const Hero = () => {
           >
             <div className="image-container">
               <img src="aniket.png" alt="Portrait of Aniket Gupta" />
+              <div className="image-ring ring-one" />
+              <div className="image-ring ring-two" />
+              <div className="floating-tags" aria-hidden="true">
+                {floatingTags.map((tag) => (
+                  <span key={tag} className="floating-tag">{tag}</span>
+                ))}
+              </div>
               <div className="glow" />
             </div>
-          </motion.div>
+          </Motion.div>
         </div>
       </div>
     </section>
@@ -116,3 +167,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

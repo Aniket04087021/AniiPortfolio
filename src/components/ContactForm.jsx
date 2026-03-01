@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/components/contactForm.scss';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -45,7 +45,7 @@ const ContactForm = () => {
   return (
     <div className="contact-form-container">
       {formStatus.isSubmitted ? (
-        <motion.div 
+        <Motion.div 
           className="success-message"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ const ContactForm = () => {
         >
           <h3>Thank You!</h3>
           <p>Your message has been sent successfully. I'll get back to you soon!</p>
-        </motion.div>
+        </Motion.div>
       ) : (
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
@@ -108,7 +108,7 @@ const ContactForm = () => {
             />
           </div>
           
-          <motion.button
+          <Motion.button
             type="submit"
             className="submit-btn"
             disabled={formStatus.isSubmitting}
@@ -116,7 +116,7 @@ const ContactForm = () => {
             whileTap={{ scale: 0.95 }}
           >
             {formStatus.isSubmitting ? 'Sending...' : 'Send Message'}
-          </motion.button>
+          </Motion.button>
         </form>
       )}
     </div>

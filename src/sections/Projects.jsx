@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { projectsData } from '../data';
 import ProjectCard from '../components/ProjectCard';
 import '../styles/sections/projects.scss';
@@ -8,7 +8,7 @@ const Projects = () => {
   return (
     <section id="projects" className="projects-section">
       <div className="container">
-        <motion.div
+        <Motion.div
           className="section-title"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,9 +17,9 @@ const Projects = () => {
         >
           <h2>My Projects</h2>
           <div className="underline"></div>
-        </motion.div>
+        </Motion.div>
 
-        <motion.p
+        <Motion.p
           className="section-description"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           Here are some of my recent projects. Each demonstrates different aspects of my skills and expertise.
-        </motion.p>
+        </Motion.p>
 
         <div className="projects-grid">
           {projectsData.map((project, index) => (
@@ -35,7 +35,7 @@ const Projects = () => {
           ))}
         </div>
 
-        <motion.div
+        <Motion.div
           className="more-projects"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ const Projects = () => {
           >
             View More Projects
           </a>
-        </motion.div>
+        </Motion.div>
       </div>
     </section>
   );

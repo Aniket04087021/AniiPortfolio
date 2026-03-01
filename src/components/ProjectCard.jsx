@@ -1,11 +1,11 @@
 import React from 'react';
 import '../styles/components/projectCard.scss';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectCard = ({ project, index }) => {
   return (
-    <motion.div
+    <Motion.div
       className="project-card"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -48,8 +48,9 @@ const ProjectCard = ({ project, index }) => {
           ))}
         </div>
       </div>
-    </motion.div>
+    </Motion.div>
   );
 };
 
 export default ProjectCard;
+

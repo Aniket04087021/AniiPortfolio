@@ -1,4 +1,4 @@
-@import '../variable';
+@use '../variable' as *;
 
 .contact-form-container {
     padding-top: 50px;
