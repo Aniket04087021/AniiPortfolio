@@ -3,7 +3,8 @@ import { motion as Motion } from 'framer-motion';
 import ContactForm from '../components/ContactForm';
 import { contactInfo } from '../data';
 import '../styles/sections/contact.scss';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaClock, FaEnvelope, FaMapMarkerAlt, FaPhone, FaReply } from 'react-icons/fa';
+import SocialLinks from '../components/SocialLinks';
 
 const Contact = () => {
   return (
@@ -20,6 +21,16 @@ const Contact = () => {
           <div className="underline"></div>
         </Motion.div>
 
+        <Motion.p
+          className="section-description"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          viewport={{ once: true }}
+        >
+          Have an idea, freelance opportunity, or collaboration in mind? Let&apos;s build something meaningful.
+        </Motion.p>
+
         <div className="contact-container">
           <Motion.div
             className="contact-info"
@@ -29,8 +40,19 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <h3>Contact Information</h3>
-            <p>Feel free to reach out to me using any of the following methods:</p>
-            
+            <p>Reach out through any channel below. I usually reply within 24 hours.</p>
+
+            <div className="contact-highlights">
+              <div className="highlight-item">
+                <FaReply />
+                <span>Fast Response</span>
+              </div>
+              <div className="highlight-item">
+                <FaClock />
+                <span>Mon-Sat Availability</span>
+              </div>
+            </div>
+
             <div className="info-items">
               <div className="info-item">
                 <div className="icon">
@@ -62,8 +84,13 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+
+            <div className="social-connect">
+              <h4>Connect On</h4>
+              <SocialLinks />
+            </div>
           </Motion.div>
-          
+
           <Motion.div
             className="contact-form-wrapper"
             initial={{ opacity: 0, x: 50 }}
@@ -72,6 +99,7 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <h3>Send A Message</h3>
+            <p>Tell me about your project goals, expected timeline, and any preferred tech stack.</p>
             <ContactForm />
           </Motion.div>
         </div>

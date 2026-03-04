@@ -1,5 +1,31 @@
 @use 'variable' as *;
 
+:root {
+  --app-bg: #ffffff;
+  --app-text: #333333;
+  --muted-text: #6f8397;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-text: #2a3f53;
+  --nav-border: rgba(52, 152, 219, 0.25);
+  --nav-theme-bg: rgba(255, 255, 255, 0.92);
+  --nav-active-bg: #3498db;
+  --nav-active-text: #ffffff;
+  color-scheme: light;
+}
+
+html[data-theme='dark'] {
+  --app-bg: #0b1420;
+  --app-text: #d9e6f2;
+  --muted-text: #a9bfd4;
+  --nav-bg: rgba(9, 20, 32, 0.9);
+  --nav-text: #d9e6f2;
+  --nav-border: rgba(102, 178, 236, 0.4);
+  --nav-theme-bg: rgba(22, 40, 58, 0.92);
+  --nav-active-bg: #2c88c6;
+  --nav-active-text: #ffffff;
+  color-scheme: dark;
+}
+
 /* Reset and base styles */
 *, *::before, *::after {
   margin: 0;
@@ -10,14 +36,22 @@
 html {
   scroll-behavior: smooth;
   font-size: $font-size-base;
+  overflow-x: clip;
 }
 
 body {
   font-family: $font-family;
   line-height: 1.6;
-  color: $text-color;
-  background-color: $bg-color;
-  overflow-x: hidden;
+  color: var(--app-text);
+  background-color: var(--app-bg);
+  overflow-x: clip;
+  transition: background-color $transition-normal, color $transition-normal;
+}
+
+#root,
+.app {
+  width: 100%;
+  overflow-x: clip;
 }
 
 a {
@@ -146,6 +180,71 @@ section {
   h2 {
     color: $primary-color;
     font-size: $font-size-large;
+  }
+}
+
+html[data-theme='dark'] {
+  .navbar {
+    &.scrolled {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.38);
+    }
+
+    .mobile-menu {
+      .mobile-menu-icon {
+        color: #d9e6f2;
+      }
+
+      .mobile-nav {
+        background-color: #0f1e2c;
+      }
+    }
+  }
+
+  section {
+    background: #0f1b29 !important;
+  }
+
+  .section-title h2,
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #deebf7 !important;
+  }
+
+  .section-description,
+  p,
+  li,
+  span,
+  small,
+  label {
+    color: var(--muted-text);
+  }
+
+  .about-text,
+  .stat-card,
+  .skills-category,
+  .overview-card,
+  .skill-bar,
+  .skill-badge,
+  .project-card,
+  .timeline-content,
+  .contact-info,
+  .contact-form-wrapper,
+  .info-item,
+  .contact-form-container .success-message,
+  .social-links a {
+    background: rgba(20, 34, 48, 0.9) !important;
+    border-color: rgba(90, 152, 202, 0.32) !important;
+    box-shadow: none !important;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .skills-search {
+    background: rgba(17, 30, 43, 0.95) !important;
+    color: #d9e6f2 !important;
+    border-color: rgba(90, 152, 202, 0.4) !important;
   }
 }
 

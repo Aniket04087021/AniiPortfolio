@@ -395,6 +395,63 @@
   50% { transform: translateY(-7px); }
 }
 
+html[data-theme='dark'] {
+  .hero-section {
+    background-color: #0f1b29;
+
+    .hero-bg-grid {
+      background-image:
+        linear-gradient(rgba(87, 164, 219, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(87, 164, 219, 0.12) 1px, transparent 1px);
+    }
+
+    .hero-text {
+      .availability {
+        background: rgba(33, 78, 112, 0.38);
+        color: #93d2ff;
+        border-color: rgba(107, 184, 235, 0.38);
+      }
+
+      .hero-chips {
+        .chip {
+          background: linear-gradient(180deg, rgba(30, 54, 76, 0.95), rgba(20, 40, 59, 0.95));
+          border-color: rgba(106, 176, 223, 0.42);
+          color: #9fd7ff;
+        }
+      }
+
+      .hero-stats {
+        .stat {
+          background: linear-gradient(160deg, rgba(27, 50, 72, 0.94), rgba(17, 33, 49, 0.92));
+          border-color: rgba(107, 184, 235, 0.34);
+          box-shadow: none;
+
+          strong {
+            color: #86cdff;
+          }
+
+          span {
+            color: #aac2d7;
+          }
+        }
+      }
+    }
+
+    .hero-image {
+      .image-container {
+        .floating-tags {
+          .floating-tag {
+            background: rgba(23, 41, 58, 0.95);
+            border-color: rgba(107, 184, 235, 0.35);
+            color: #9fd7ff;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: $breakpoint-md) {
   .hero-section {
     height: auto;

@@ -76,7 +76,16 @@ export const navLinks = [
   
   export const projectsData = [
     {
-      id: "project1",
+  id: "project1",
+  title: "Expense Tracker",
+  description: "Expense Tracker is a full-stack web application that helps users manage their daily finances by tracking income and expenses. The application allows users to add, edit, and delete transactions while providing a clear overview of their financial activities. It helps users monitor spending habits and maintain better financial control through a simple and intuitive interface.",
+  image: "expense tracker.png",
+  tags: ["React", "Node.js", "Express", "MongoDB"],
+  sourceCode: "https://github.com/Aniket04087021/Expense_Tracker",
+  liveDemo: "https://expense-tracker-lyart-alpha.vercel.app/",
+},
+    {
+      id: "project2",
       title: "Anii Care App",
       description: "ANII Care is a comprehensive hospital booking system designed to streamline appointment scheduling for patients and healthcare providers. Built as a full-stack web application, it ensures an efficient and user-friendly experience for booking medical consultations.",
       image: "anii care.png",
@@ -85,7 +94,7 @@ export const navLinks = [
       liveDemo: "https://anii-care.vercel.app/",
     },
     {
-      id: "project2",
+      id: "project3",
       title: "Anii Hotel",
       description: "ANII Hotel is a full-stack web application that simplifies the hotel booking process by allowing users to browse, select, and book hotel rooms effortlessly. It provides an intuitive interface for both customers and hotel administrators to manage bookings efficiently.",
       image: "anii hotel.png",
@@ -94,7 +103,7 @@ export const navLinks = [
       liveDemo: "https://hostel-booking-app-jdda.vercel.app/",
     },
     {
-      id: "project3",
+      id: "project4",
       title: "Anii Naukri",
       description: "A full-stack job portal built using the MERN stack to connect job seekers with employers.Features include job listings, applications, user authentication, and employer dashboards.Designed a responsive UI/UX for seamless navigation and an efficient job search experience.",
       image: "Anii Naukri.png",
@@ -103,7 +112,7 @@ export const navLinks = [
       liveDemo: "https://job-portal-tlyh.vercel.app/",
     },
     {
-  id: "project4",
+  id: "project5",
   title: "Task Manager App",
   description: "A full-stack task management application built using the MERN stack. Users can sign up or log in using JWT-based authentication, and perform CRUD operations on tasks. Features include adding tasks, marking them as completed, editing task details, and deleting tasks. Designed with a clean and responsive UI for a smooth user experience.",
   image: "Task Manager.png",
@@ -112,7 +121,7 @@ export const navLinks = [
   liveDemo: "https://task-manager-mezo.vercel.app/"
 },
 {
-  id: "project5",
+  id: "project6",
   title: "Ticket Pop",
   description: "A full-stack movie booking application built using the MERN stack with authentication and user management powered by Clerk. Users can sign up, log in, and manage their profiles securely through Clerk's authentication system, ensuring a smooth onboarding experience. The app enables users to browse movies, filter by genre or language, select show timings, and book seats with instant confirmation.",
   image: "TicketPop.png",
@@ -121,7 +130,7 @@ export const navLinks = [
   liveDemo: "https://ticket-pop-2h36.vercel.app/"
 },
 {
-  id: "project6",
+  id: "project7",
   title: "Weather Chatbot AI Agent",
   description: "An AI-powered chatbot application that provides real-time weather updates and forecasts based on user queries. Built using the MERN stack, the app integrates an intelligent chat interface where users can interact naturally to get location-based weather insights. It leverages the Mastra Weather Agent streaming API for live weather data, offering a seamless conversational experience and responsive design across devices.",
   image: "weather.png",
@@ -135,6 +144,17 @@ export const navLinks = [
   ];
   
   export const experienceData = [
+    {
+  company: "Rajlaxmi Pvt. Ltd.",
+  position: "Web Developer Intern",
+  period: "Present",
+  description: "Currently working as a Web Developer Intern, contributing to the development and maintenance of web applications. Involved in building responsive user interfaces, integrating APIs, and improving application performance while collaborating with the development team.",
+  achievements: [
+    "Developing responsive web pages using modern frontend technologies",
+    "Collaborating with team members to implement new features and improvements",
+    "Assisting in debugging, testing, and optimizing web applications"
+  ]
+},
     {
       company: "Suvidha Foundation.",
       position: "Data Science Developer",

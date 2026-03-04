@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { navLinks } from '../data';
 import '../styles/components/navbar.scss';
 import { motion as Motion } from 'framer-motion';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaMoon, FaSun, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [active, setActive] = useState('home');
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [themeMode, setThemeMode] = useState('system');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +35,19 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme-preference');
+    const initialTheme = savedTheme === 'dark' ? 'dark' : 'light';
+    setThemeMode(initialTheme);
+    document.documentElement.setAttribute('data-theme', initialTheme);
+  }, []);
+
+  const handleThemeChange = (mode) => {
+    setThemeMode(mode);
+    localStorage.setItem('theme-preference', mode);
+    document.documentElement.setAttribute('data-theme', mode);
+  };
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
@@ -66,6 +80,23 @@ const Navbar = () => {
           ))}
         </ul>
 
+        <div className="theme-switch" role="group" aria-label="Theme mode">
+          <button
+            className={themeMode === 'light' ? 'active' : ''}
+            onClick={() => handleThemeChange('light')}
+            aria-label="Light mode"
+          >
+            <FaSun />
+          </button>
+          <button
+            className={themeMode === 'dark' ? 'active' : ''}
+            onClick={() => handleThemeChange('dark')}
+            aria-label="Dark mode"
+          >
+            <FaMoon />
+          </button>
+        </div>
+
         <div className="mobile-menu">
           <div className="mobile-menu-icon" onClick={() => setToggle(!toggle)}>
             {toggle ? <FaTimes /> : <FaBars />}
@@ -80,6 +111,22 @@ const Navbar = () => {
             }}
             transition={{ duration: 0.3 }}
           >
+            <div className="theme-switch mobile-theme-switch" role="group" aria-label="Theme mode">
+              <button
+                className={themeMode === 'light' ? 'active' : ''}
+                onClick={() => handleThemeChange('light')}
+                aria-label="Light mode"
+              >
+                <FaSun />
+              </button>
+              <button
+                className={themeMode === 'dark' ? 'active' : ''}
+                onClick={() => handleThemeChange('dark')}
+                aria-label="Dark mode"
+              >
+                <FaMoon />
+              </button>
+            </div>
             <ul className="nav-links">
               {navLinks.map((link) => (
                 <li key={link.id}>
@@ -104,4 +151,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
