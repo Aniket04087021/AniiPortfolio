@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aniketguptaportfolio.vercel.app/sitemap.xml
+Sitemap: https://aniketgupta.me/sitemap.xml
+Host: https://aniketgupta.me
