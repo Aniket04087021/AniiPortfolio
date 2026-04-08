@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://aniketguptaportfolio.vercel.app/</loc>
+    <loc>https://aniketgupta.me/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://aniketgupta.me/aniket.png</image:loc>
+      <image:title>Aniket Gupta Portfolio</image:title>
+      <image:caption>Portrait of Aniket Gupta, MERN Stack Developer</image:caption>
+    </image:image>
   </url>
 </urlset>

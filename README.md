@@ -1,12 +1,46 @@
-# React + Vite
+# Aniket Gupta Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official portfolio website of **Aniket Gupta**, a MERN Stack Developer.
 
-Currently, two official plugins are available:
+Live site: https://aniketgupta.me
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
 
-## Expanding the ESLint configuration
+This portfolio highlights:
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Full stack web development projects
+- MERN stack skills (MongoDB, Express.js, React, Node.js)
+- Experience and education
+- Contact details for freelance and full-time opportunities
+
+## Tech Stack
+
+- React
+- Vite
+- SCSS
+- Framer Motion
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Build for Production
+
+```bash
+npm run build
+npm run preview
+```
+
+## SEO Notes
+
+The portfolio includes:
+
+- Canonical URL setup
+- Open Graph and Twitter metadata
+- Person and Website structured data (JSON-LD)
+- Robots and sitemap configuration
+
+If you are searching for **Aniket Gupta portfolio**, this project is the official source website.

@@ -9,7 +9,6 @@ import Experience from './sections/Experience';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import { motion as Motion } from 'framer-motion';
-import { socialLinks } from './data';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,64 +23,53 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const siteUrl = window.location.origin;
-    const pageUrl = window.location.href;
+    const siteUrl = 'https://aniketgupta.me';
 
-    document.title = 'Aniket Gupta | MERN Stack Developer Portfolio';
+    document.title = 'Aniket Gupta Portfolio | MERN Stack Developer in India';
 
     const canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) {
-      canonicalLink.setAttribute('href', pageUrl);
+      canonicalLink.setAttribute('href', siteUrl);
     }
 
-    const existingSchema = document.getElementById('person-schema');
-    if (existingSchema) {
-      existingSchema.remove();
-    }
-
-    const personSchema = {
-      '@context': 'https://schema.org',
-      '@type': 'Person',
-      name: 'Aniket Gupta',
-      jobTitle: 'MERN Stack Developer',
-      url: pageUrl,
-      email: 'mailto:gupta.aniket0408@gmail.com',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Kalyan',
-        addressRegion: 'Maharashtra',
-        addressCountry: 'IN',
-      },
-      sameAs: socialLinks.map((link) => link.url),
-      image: `${siteUrl}/aniket.png`,
-      knowsAbout: [
-        'React',
-        'Node.js',
-        'Express.js',
-        'MongoDB',
-        'JavaScript',
-        'Full Stack Development',
-      ],
+    const upsertMeta = (selector, attributes) => {
+      let meta = document.querySelector(selector);
+      if (!meta) {
+        meta = document.createElement('meta');
+        if (attributes.name) {
+          meta.setAttribute('name', attributes.name);
+        }
+        if (attributes.property) {
+          meta.setAttribute('property', attributes.property);
+        }
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', attributes.content);
     };
 
-    const websiteSchema = {
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      name: 'Aniket Gupta Portfolio',
-      url: siteUrl,
-    };
-
-    const schemaScript = document.createElement('script');
-    schemaScript.type = 'application/ld+json';
-    schemaScript.id = 'person-schema';
-    schemaScript.textContent = JSON.stringify([personSchema, websiteSchema]);
-    document.head.appendChild(schemaScript);
+    upsertMeta('meta[property="og:url"]', {
+      property: 'og:url',
+      content: siteUrl,
+    });
+    upsertMeta('meta[property="og:title"]', {
+      property: 'og:title',
+      content: 'Aniket Gupta Portfolio | MERN Stack Developer',
+    });
+    upsertMeta('meta[property="og:description"]', {
+      property: 'og:description',
+      content: 'Official portfolio of Aniket Gupta. Discover MERN projects, skills, and experience.',
+    });
+    upsertMeta('meta[name="twitter:title"]', {
+      name: 'twitter:title',
+      content: 'Aniket Gupta Portfolio | MERN Stack Developer',
+    });
+    upsertMeta('meta[name="twitter:description"]', {
+      name: 'twitter:description',
+      content: 'Official portfolio of Aniket Gupta with projects, skills, and experience.',
+    });
 
     return () => {
-      const scriptNode = document.getElementById('person-schema');
-      if (scriptNode) {
-        scriptNode.remove();
-      }
+      // Keep static SEO tags from index.html untouched on unmount.
     };
   }, []);
 
