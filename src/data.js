@@ -84,8 +84,17 @@ export const navLinks = [
   sourceCode: "https://github.com/Aniket04087021/Expense_Tracker",
   liveDemo: "https://expense-tracker-lyart-alpha.vercel.app/",
 },
+{
+  "id": "project2",
+  "title": "Explain My Code",
+  "description": "Explain My Code is an AI-powered web application that helps developers understand, debug, and analyze code. Users can paste code snippets to get clear explanations, execution flow, and complexity insights, making it easier to simplify complex code and improve productivity.",
+  image: "explainmycode.jpg",
+  "tags": ["React", "Node.js", "Express", "AI Integration", "MongoDB"],
+  "sourceCode": "https://github.com/Aniket04087021/Explain-My-Code",
+  "liveDemo": "https://explain-my-code-three.vercel.app/"
+},
     {
-      id: "project2",
+      id: "project3",
       title: "Anii Care App",
       description: "ANII Care is a comprehensive hospital booking system designed to streamline appointment scheduling for patients and healthcare providers. Built as a full-stack web application, it ensures an efficient and user-friendly experience for booking medical consultations.",
       image: "anii care.png",
@@ -94,7 +103,7 @@ export const navLinks = [
       liveDemo: "https://anii-care.vercel.app/",
     },
     {
-      id: "project3",
+      id: "project4",
       title: "Anii Hotel",
       description: "ANII Hotel is a full-stack web application that simplifies the hotel booking process by allowing users to browse, select, and book hotel rooms effortlessly. It provides an intuitive interface for both customers and hotel administrators to manage bookings efficiently.",
       image: "anii hotel.png",
@@ -103,7 +112,7 @@ export const navLinks = [
       liveDemo: "https://hostel-booking-app-jdda.vercel.app/",
     },
     {
-      id: "project4",
+      id: "project5",
       title: "Anii Naukri",
       description: "A full-stack job portal built using the MERN stack to connect job seekers with employers.Features include job listings, applications, user authentication, and employer dashboards.Designed a responsive UI/UX for seamless navigation and an efficient job search experience.",
       image: "Anii Naukri.png",
@@ -112,7 +121,7 @@ export const navLinks = [
       liveDemo: "https://job-portal-tlyh.vercel.app/",
     },
     {
-  id: "project5",
+  id: "project6",
   title: "Task Manager App",
   description: "A full-stack task management application built using the MERN stack. Users can sign up or log in using JWT-based authentication, and perform CRUD operations on tasks. Features include adding tasks, marking them as completed, editing task details, and deleting tasks. Designed with a clean and responsive UI for a smooth user experience.",
   image: "Task Manager.png",
@@ -121,7 +130,7 @@ export const navLinks = [
   liveDemo: "https://task-manager-mezo.vercel.app/"
 },
 {
-  id: "project6",
+  id: "project7",
   title: "Ticket Pop",
   description: "A full-stack movie booking application built using the MERN stack with authentication and user management powered by Clerk. Users can sign up, log in, and manage their profiles securely through Clerk's authentication system, ensuring a smooth onboarding experience. The app enables users to browse movies, filter by genre or language, select show timings, and book seats with instant confirmation.",
   image: "TicketPop.png",
@@ -130,7 +139,7 @@ export const navLinks = [
   liveDemo: "https://ticket-pop-2h36.vercel.app/"
 },
 {
-  id: "project7",
+  id: "project8",
   title: "Weather Chatbot AI Agent",
   description: "An AI-powered chatbot application that provides real-time weather updates and forecasts based on user queries. Built using the MERN stack, the app integrates an intelligent chat interface where users can interact naturally to get location-based weather insights. It leverages the Mastra Weather Agent streaming API for live weather data, offering a seamless conversational experience and responsive design across devices.",
   image: "weather.png",
