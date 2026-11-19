@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion as Motion } from 'framer-motion';
 import { projectsData } from '../data';
 import ProjectCard from '../components/ProjectCard';
+import { FaCodeBranch, FaLayerGroup, FaRocket } from 'react-icons/fa';
 import '../styles/sections/projects.scss';
 
 const Projects = () => {
+  const projectStats = useMemo(() => {
+    const total = projectsData.length;
+    const live = projectsData.filter((project) => project.liveDemo).length;
+    const uniqueTech = new Set(projectsData.flatMap((project) => project.tags || []));
+
+    return {
+      total,
+      live,
+      techCount: uniqueTech.size,
+    };
+  }, []);
+
   return (
     <section id="projects" className="projects-section">
       <div className="container">
@@ -26,8 +39,38 @@ const Projects = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Here are some of my recent projects. Each demonstrates different aspects of my skills and expertise.
+          Here are selected builds that combine product thinking, solid engineering, and polished UX.
         </Motion.p>
+
+        <Motion.div
+          className="projects-stats"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          viewport={{ once: true }}
+        >
+          <div className="stat-item">
+            <span className="icon"><FaLayerGroup /></span>
+            <div>
+              <strong>{projectStats.total}</strong>
+              <p>Portfolio Projects</p>
+            </div>
+          </div>
+          <div className="stat-item">
+            <span className="icon"><FaRocket /></span>
+            <div>
+              <strong>{projectStats.live}</strong>
+              <p>Live Deployments</p>
+            </div>
+          </div>
+          <div className="stat-item">
+            <span className="icon"><FaCodeBranch /></span>
+            <div>
+              <strong>{projectStats.techCount}+</strong>
+              <p>Technologies Used</p>
+            </div>
+          </div>
+        </Motion.div>
 
         <div className="projects-grid">
           {projectsData.map((project, index) => (

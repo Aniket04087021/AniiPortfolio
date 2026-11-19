@@ -11,7 +11,7 @@
   background-color: transparent;
   
   &.scrolled {
-    background-color: white;
+    background-color: var(--nav-bg);
     box-shadow: $shadow-sm;
     padding: $spacing-sm 0;
   }
@@ -41,6 +41,7 @@
     li {
       a {
         color: $text-color;
+        color: var(--nav-text);
         font-weight: 500;
         position: relative;
         
@@ -63,6 +64,34 @@
         &.active-link {
           color: $primary-color;
         }
+      }
+    }
+  }
+
+  .theme-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid var(--nav-border);
+    background: var(--nav-theme-bg);
+    border-radius: 999px;
+    padding: 3px;
+
+    button {
+      width: 32px;
+      height: 32px;
+      border: none;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      color: var(--nav-text);
+      background: transparent;
+      transition: $transition-normal;
+
+      &.active {
+        background: var(--nav-active-bg);
+        color: var(--nav-active-text);
       }
     }
   }
@@ -102,6 +131,10 @@
           }
         }
       }
+
+      .mobile-theme-switch {
+        margin-bottom: $spacing-lg;
+      }
     }
   }
 }
@@ -111,9 +144,19 @@
     .desktop-nav {
       display: none;
     }
+
+    .theme-switch {
+      display: none;
+    }
     
     .mobile-menu {
       display: block;
+
+      .mobile-nav {
+        .mobile-theme-switch {
+          display: inline-flex;
+        }
+      }
     }
   }
 }

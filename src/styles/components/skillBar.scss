@@ -2,35 +2,42 @@
 @use '../variable' as *;
 
 .skill-bar {
-  margin-bottom: $spacing-md;
-  padding: $spacing-sm $spacing-md;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid $border-color;
-  border-radius: $border-radius-lg;
+  margin-bottom: 10px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(52, 152, 219, 0.18);
+  border-radius: 12px;
   transition: transform $transition-fast, box-shadow $transition-fast;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 20px rgba(20, 70, 108, 0.14);
   }
   
   .skill-info {
     display: flex;
     justify-content: space-between;
-    margin-bottom: $spacing-xs;
+    align-items: center;
+    margin-bottom: 8px;
     
     .skill-name {
-      font-weight: 500;
+      font-weight: 600;
+      color: #214460;
     }
     
     .skill-percentage {
-      color: $primary-color;
+      color: #0f5e94;
+      font-weight: 700;
+      font-size: 0.86rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(52, 152, 219, 0.13);
     }
   }
   
   .skill-progress-bg {
-    height: 10px;
-    background-color: $bg-dark;
+    height: 11px;
+    background-color: #e7f1f9;
     border-radius: $border-radius-full;
     overflow: hidden;
     
@@ -58,12 +65,12 @@
         top: 50%;
         right: 0;
         transform: translate(50%, -50%);
-        width: 14px;
-        height: 14px;
+        width: 13px;
+        height: 13px;
         border-radius: 50%;
-        background: $primary-color;
-        border: 2px solid color.adjust($primary-color, $lightness: 20%);
-        box-shadow: 0 0 10px rgba($primary-color, 0.6);
+        background: #fff;
+        border: 2px solid rgba(52, 152, 219, 0.9);
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
       }
     }
   }

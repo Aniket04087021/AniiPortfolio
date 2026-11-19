@@ -1,232 +1,185 @@
 @use '../variable' as *;
 
 .contact-section {
-  background-color: $bg-color;
   padding: $spacing-xxxl 0;
-  
-  @media (max-width: $breakpoint-md) {
-    padding: $spacing-xxl 0;
-  }
-  
-  @media (max-width: $breakpoint-sm) {
-    padding: $spacing-xl 0;
-  }
-
-  .container {
-    position: relative;
-  }
+  background:
+    radial-gradient(circle at 10% 18%, rgba(52, 152, 219, 0.16), transparent 35%),
+    radial-gradient(circle at 90% 82%, rgba(41, 128, 185, 0.1), transparent 42%),
+    linear-gradient(180deg, #f6fbff 0%, #f9fcff 45%, #ffffff 100%);
 
   .section-title {
     text-align: center;
-    margin-bottom: $spacing-xl;
-    
-    @media (max-width: $breakpoint-sm) {
-      margin-bottom: $spacing-lg;
-    }
+    margin-bottom: $spacing-md;
 
     h2 {
-      font-size: $font-size-xlarge;
-      font-weight: 700;
-      position: relative;
-      
-      @media (max-width: $breakpoint-sm) {
-        font-size: $font-size-large;
-      }
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      letter-spacing: 0.4px;
     }
+  }
 
-    .underline {
-      width: 70px;
-      height: 4px;
-      background-color: $primary-color;
-      margin: $spacing-sm auto 0;
-      border-radius: $border-radius-sm;
-      
-      @media (max-width: $breakpoint-sm) {
-        width: 50px;
-        height: 3px;
-      }
-    }
+  .section-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto $spacing-xl;
+    color: #5f7386;
+    line-height: 1.75;
   }
 
   .contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 16px;
     align-items: stretch;
-    gap: $spacing-lg;
-    
-    @media (max-width: $breakpoint-md) {
-      gap: $spacing-md;
-    }
-    
-    @media (max-width: $breakpoint-sm) {
-      flex-direction: column;
-      align-items: center;
-      gap: $spacing-lg;
-    }
   }
 
-  .contact-info, .contact-form-wrapper {
-    width: calc(50% - #{$spacing-lg * 0.5});
-    background-color: white;
-    padding: $spacing-lg;
-    border-radius: $border-radius-md;
-    box-shadow: $shadow-md;
-    transition: all $transition-normal;
-    
-    @media (max-width: $breakpoint-md) {
-      width: calc(50% - #{$spacing-md * 0.5});
-      padding: $spacing-md;
-    }
-    
-    @media (max-width: $breakpoint-sm) {
-      width: 100%;
-      margin-bottom: 0;
-    }
+  .contact-info,
+  .contact-form-wrapper {
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    border-radius: 16px;
+    background: linear-gradient(165deg, rgba(255, 255, 255, 0.95), rgba(244, 249, 255, 0.94));
+    box-shadow: 0 15px 32px rgba(18, 62, 94, 0.09);
+    padding: 16px;
   }
 
   .contact-info {
     h3 {
-      font-size: $font-size-medium;
-      font-weight: 700;
-      color: $primary-color;
-      margin-bottom: $spacing-md;
-      
-      @media (max-width: $breakpoint-sm) {
-        font-size: calc(#{$font-size-small} + 2px);
-      }
+      font-size: 1.35rem;
+      color: #153a56;
+      margin-bottom: 8px;
     }
 
     p {
-      font-size: $font-size-small;
-      color: $text-light;
-      margin-bottom: $spacing-md;
-      
-      &:last-child {
-        margin-bottom: 0;
+      color: #5f7386;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .contact-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+
+      .highlight-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: #176ea7;
+        background: rgba(52, 152, 219, 0.12);
+        border: 1px solid rgba(52, 152, 219, 0.25);
+        padding: 6px 9px;
+        border-radius: 999px;
       }
     }
 
     .info-items {
       display: flex;
       flex-direction: column;
-      gap: $spacing-md;
-      
-      @media (max-width: $breakpoint-sm) {
-        gap: $spacing-sm;
-      }
+      gap: 10px;
+      margin-bottom: 16px;
     }
 
     .info-item {
       display: flex;
       align-items: center;
-      gap: $spacing-md;
-      
-      @media (max-width: $breakpoint-sm) {
-        gap: $spacing-sm;
-      }
-      
-      @media (max-width: $breakpoint-xs) {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: center;
-      }
+      gap: 10px;
+      border: 1px solid rgba(52, 152, 219, 0.17);
+      border-radius: 12px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.86);
     }
 
     .icon {
-      width: 40px;
-      height: 40px;
-      background-color: $primary-color;
-      color: white;
-      border-radius: $border-radius-full;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: $font-size-medium;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: #1470ab;
+      background: rgba(52, 152, 219, 0.14);
       flex-shrink: 0;
-      
-      @media (max-width: $breakpoint-sm) {
-        width: 36px;
-        height: 36px;
-        font-size: $font-size-small;
-      }
-      
-      @media (max-width: $breakpoint-xs) {
-        margin: 0 auto $spacing-xs;
-      }
     }
 
     .text {
-      flex: 1;
-      
-      @media (max-width: $breakpoint-xs) {
-        width: 100%;
-        text-align: center;
-      }
-      
       h4 {
-        font-size: $font-size-small;
-        font-weight: 600;
-        color: $text-color;
-        margin-bottom: $spacing-xs;
+        font-size: 0.86rem;
+        font-weight: 700;
+        color: #193e59;
+        margin-bottom: 2px;
       }
 
       p {
-        font-size: $font-size-small;
-        color: $text-light;
-        margin-bottom: 0;
-        word-break: break-word;
+        margin: 0;
+        font-size: 0.85rem;
+        color: #5e7387;
+        line-height: 1.45;
+      }
+    }
+
+    .social-connect {
+      border-top: 1px dashed rgba(52, 152, 219, 0.35);
+      padding-top: 12px;
+
+      h4 {
+        font-size: 0.86rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #1b608f;
+        margin-bottom: 10px;
+      }
+
+      .social-links a {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: rgba(52, 152, 219, 0.12);
+        color: #156da5;
+        border: 1px solid rgba(52, 152, 219, 0.22);
       }
     }
   }
 
   .contact-form-wrapper {
     h3 {
-      font-size: $font-size-medium;
-      font-weight: 700;
-      color: $primary-color;
-      margin-bottom: $spacing-md;
-      
-      @media (max-width: $breakpoint-sm) {
-        font-size: calc(#{$font-size-small} + 2px);
-      }
+      font-size: 1.35rem;
+      color: #153a56;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #5f7386;
+      line-height: 1.6;
+      margin-bottom: 12px;
     }
   }
-  
-  // This selector assumes you have a form element inside .contact-form-wrapper
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-md;
-    
-    @media (max-width: $breakpoint-sm) {
-      gap: $spacing-sm;
+}
+
+@media (max-width: $breakpoint-md) {
+  .contact-section {
+    padding: $spacing-xxl 0;
+
+    .contact-container {
+      grid-template-columns: 1fr;
+      gap: 14px;
     }
-    
-    input, textarea {
-      width: 100%;
-      padding: $spacing-sm;
-      border: 1px solid $border-color;
-      border-radius: $border-radius-sm;
-      font-size: $font-size-small;
-      
-      &:focus {
-        outline: none;
-        border-color: $primary-color;
-      }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .contact-section {
+    padding: $spacing-xl 0;
+
+    .contact-info,
+    .contact-form-wrapper {
+      padding: 12px;
+      border-radius: 14px;
     }
-    
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-    
-    button {
-      align-self: flex-start;
-      
-      @media (max-width: $breakpoint-xs) {
-        align-self: center;
-        width: 100%;
+
+    .contact-info {
+      .info-item {
+        align-items: flex-start;
       }
     }
   }

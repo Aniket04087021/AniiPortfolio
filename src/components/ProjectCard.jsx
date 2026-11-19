@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/components/projectCard.scss';
 import { motion as Motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaCode, FaExternalLinkAlt, FaGithub, FaPlayCircle } from 'react-icons/fa';
 
 const ProjectCard = ({ project, index }) => {
   return (
@@ -14,6 +14,8 @@ const ProjectCard = ({ project, index }) => {
     >
       <div className="project-image">
         <img src={project.image} alt={project.title} />
+        <span className="project-index">0{index + 1}</span>
+        {project.apiUsage && <span className="project-badge">API Integrated</span>}
         <div className="project-links">
           <a
             href={project.sourceCode}
@@ -39,13 +41,34 @@ const ProjectCard = ({ project, index }) => {
       <div className="project-info">
         <h3>{project.title}</h3>
         <p>{project.description}</p>
-        
+
         <div className="project-tags">
           {project.tags.map((tag, tagIndex) => (
             <span key={tagIndex} className="tag">
               {tag}
             </span>
           ))}
+        </div>
+
+        <div className="project-actions">
+          <a
+            href={project.sourceCode}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${project.title} source code on GitHub`}
+          >
+            <FaCode />
+            Source
+          </a>
+          <a
+            href={project.liveDemo}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${project.title} live demo`}
+          >
+            <FaPlayCircle />
+            Live Demo
+          </a>
         </div>
       </div>
     </Motion.div>
