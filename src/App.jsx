@@ -1,3 +1,16 @@
+import React, { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './sections/Hero';
+import About from './sections/About';
+import Projects from './sections/Projects';
+import Skills from './sections/Skills';
+import Education from './sections/Education';
+import Experience from './sections/Experience';
+import Contact from './sections/Contact';
+import Footer from './components/Footer';
+import { motion as Motion } from 'framer-motion';
+import { socialLinks } from './data';
+import { Analytics } from '@vercel/analytics/react';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { aboutData, projectsData, skillsData, experienceData, educationData, contactInfo, socialLinks } from './data';
@@ -150,6 +163,8 @@ function App() {
           </div>
         </section>
       </main>
+      <Footer />
+      <Analytics />
       <footer className="site-footer"><span>© {new Date().getFullYear()} ANIKET GUPTA</span><span>DESIGNED WITH INTENTION · BUILT WITH CODE</span><span>INDIA / IN</span></footer>
     </div>
   );
